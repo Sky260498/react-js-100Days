@@ -25,13 +25,14 @@ function FilterModule() {
       }
 
       const removeSearchTerm = (removedTerm) => {
-        searchArray.filter((term) => !term.includes(removedTerm));
+        const filteredSearch = searchArray.filter((term) => !term.includes(removedTerm));
+        setSearchArray(filteredSearch);
       }
 
   return (
     <div>
         <Filter filterCountryList={filterCountryList} addSearchTerm={addSearchTerm} removeSearchTerm={removeSearchTerm} searchedData={searchArray} />
-        <CountryList countries={countryList} />
+        <CountryList countries={countryList} addSearchTerm={addSearchTerm} />
     </div>
   )
 }

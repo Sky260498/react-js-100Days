@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Earth from '../icons/Earth'
+import Backspace from '../icons/Backspace';
 
-function Filter({filterCountryList, addSearchTerm, searchedData}) {
+function Filter({filterCountryList, addSearchTerm, searchedData, removeSearchTerm}) {
   const [inputVal, setInputVal] = useState('');
   const handleKeyEvent =(e)=> {
-    if(e.key == " " ||
-    e.code == "Space" ||      
-    e.keyCode == 32 || e.keyCode == 13) {
+    if(e.key === " " ||
+    e.code === "Space" ||      
+    e.keyCode === 32 || e.keyCode === 13) {
       addSearchTerm(e.target.value);     
       setInputVal("");
       filterCountryList("");
@@ -41,7 +42,7 @@ function Filter({filterCountryList, addSearchTerm, searchedData}) {
         <div>
           {
             searchedData.length > 0 && <div className='rounded-md px-2 pt-2 flex flex-wrap w-full border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6'>
-            {searchedData.map((searchTerm)=><div key={searchTerm} className='capitalize rounded-md px-2 mx-1 mb-2 ring-1 ring-inset ring-gray-300'>{searchTerm}</div>)}
+            {searchedData.map((searchTerm)=><div key={searchTerm} className='flex capitalize rounded-md px-2 mx-1 mb-2 ring-1 ring-inset ring-gray-300'>{searchTerm}&nbsp;<div onClick={()=>removeSearchTerm(searchTerm)}><Backspace /></div></div>)}
           </div>
           }
         </div>
