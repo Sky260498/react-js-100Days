@@ -20,7 +20,7 @@ function Filter({filterCountryList, addSearchTerm, searchedData, removeSearchTer
   }
 
   return (
-    <div className="main-container">
+    <div className="main-container sticky top-0 w-full">
       <div className='mx-auto w-1/2 p-2'>
         <div className="relative mt-2 rounded-md shadow-sm">
           <div>
@@ -41,7 +41,7 @@ function Filter({filterCountryList, addSearchTerm, searchedData, removeSearchTer
         </div>
         <div>
           {
-            searchedData.length > 0 && <div className='rounded-md px-2 pt-2 flex flex-wrap w-full border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6'>
+            searchedData.length > 0 && <div className='bg-white rounded-md px-2 pt-2 flex flex-wrap w-full border-0 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-200 sm:text-sm sm:leading-6'>
             {searchedData.map((searchTerm)=><div key={searchTerm} className='flex capitalize rounded-md px-2 mx-1 mb-2 ring-1 ring-inset ring-gray-300'>{searchTerm}&nbsp;<div onClick={()=>removeSearchTerm(searchTerm)}><Backspace /></div></div>)}
           </div>
           }
