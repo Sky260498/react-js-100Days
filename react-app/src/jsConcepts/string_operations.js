@@ -45,3 +45,14 @@ If length not specified then return whole extracted string.
 let subStringstr1 = str2.substr(-4);
 console.log(subStringstr);
 // op: ring
+
+// 4. Replacing String Content
+let strReplace = "String to check replace method";
+let replacedString = strReplace.replace("check", "tested");
+console.log(replacedString);
+// op: String to tested replace method
+/*
+The replace() method does not change the string it is called on.
+The replace() method returns a new string.
+The replace() method replaces only the first match
+*/
