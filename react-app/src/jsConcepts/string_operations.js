@@ -56,3 +56,32 @@ The replace() method does not change the string it is called on.
 The replace() method returns a new string.
 The replace() method replaces only the first match
 */
+/*To replace case insensitive, use a regular expression with an /i flag (insensitive)*/
+let replacedString1 = strReplace.replace(/Replace/i,"tested");
+console.log(replacedString1);
+// op: String to tested replace method
+/* 
+To replace all matches, use a regular expression with a /g flag (global match)
+*/
+let newString = "The string with gobal match to replace all string occurances";
+let replacedString2 = newString.replace(/string/g,"tested");
+console.log(replacedString2);
+// op:The tested with gobal match to replace all tested occurances
+
+// 5. JavaScript String ReplaceAll()
+let strReplaceAll = "Javascript string method to replace all the similar string occurances on given string";
+let newReplacedStr = strReplaceAll.replaceAll("string", "replaced string");
+console.log(newReplacedStr);
+// op: Javascript replaced string method to replace all the similar replaced string occurances on given replaced string.
+
+// 6. Javascript String trim()
+/**
+ * This Method remove all the whitespaces from front and back side of string.
+ */
+let strToTrim = "     Javascript string method to replace all the similar STRING occurances on given String     ";
+let trimedString = strReplaceAll.trim();
+console.log("Main String:",strReplaceAll);
+console.log("Trimed String:",newReplacedStr);
+// op: 
+// Main String:      Javascript string method to replace all the similar STRING occurances on given String     
+// Trimed String: Javascript string method to replace all the similar STRING occurances on given String
