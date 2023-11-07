@@ -1,13 +1,17 @@
-/**
+/**------------------
 JS String Methods
-**/ 
+------------------**/ 
 
-// 1. JavaScript String Length
+/** ==================================
+ * 1. JavaScript String Length
+ ===================================== */ 
 let str = "String to calculate length";
 console.log(str.length);
 // op: 26
 
-// 2. JavaScript String slice()
+/** ==================================
+ * 2. JavaScript String slice()
+ ===================================== */ 
 let str1 = "String to slice";
 /** 
 slice() extracts a part of a string and returns the extracted part in a new string.
@@ -29,7 +33,9 @@ let sliceStr2 = str1.slice(-5, -2);
 console.log(sliceStr2);
 // op: sli
 
-// 3. JavaScript String substr()
+/** ==================================
+ * 3. JavaScript String substr()
+ ===================================== */ 
 let str2 = "String to Substring";
 /**
  * It Takes 2 parameters First for Starting index.
@@ -46,7 +52,9 @@ let subStringstr1 = str2.substr(-4);
 console.log(subStringstr);
 // op: ring
 
-// 4. Replacing String Content
+/** ==================================
+ * 4. Replacing String Content
+ ===================================== */ 
 let strReplace = "String to check replace method";
 let replacedString = strReplace.replace("check", "tested");
 console.log(replacedString);
@@ -68,13 +76,17 @@ let replacedString2 = newString.replace(/string/g,"tested");
 console.log(replacedString2);
 // op:The tested with gobal match to replace all tested occurances
 
-// 5. JavaScript String ReplaceAll()
+/** ==================================
+ * 5. JavaScript String ReplaceAll() 
+ ===================================== */ 
 let strReplaceAll = "Javascript string method to replace all the similar string occurances on given string";
 let newReplacedStr = strReplaceAll.replaceAll("string", "replaced string");
 console.log(newReplacedStr);
 // op: Javascript replaced string method to replace all the similar replaced string occurances on given replaced string.
 
-// 6. Javascript String trim()
+/** ==================================
+ * 6. Javascript String trim()
+ ===================================== */ 
 /**
  * This Method remove all the whitespaces from front and back side of string.
  */
@@ -85,3 +97,13 @@ console.log("Trimed String:",newReplacedStr);
 // op: 
 // Main String:      Javascript string method to replace all the similar STRING occurances on given String     
 // Trimed String: Javascript string method to replace all the similar STRING occurances on given String
+
+/** ==================================
+ * 7. Character Access
+ ===================================== */ 
+ let charAccessStr = "String for checking access";
+ console.log(charAccessStr.charAt(2));
+ console.log(charAccessStr[11]);
+/** When using bracket notation for character access, attempting to delete or assign a value 
+ * to these properties will not succeed.
+**/
